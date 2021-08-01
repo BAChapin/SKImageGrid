@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74A0167826B706FD004DFEBE /* SKImageGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167726B706FD004DFEBE /* SKImageGridViewModel.swift */; };
+		74A0167A26B70B28004DFEBE /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167926B70B28004DFEBE /* MapScene.swift */; };
+		74A0167C26B70B79004DFEBE /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167B26B70B79004DFEBE /* CGSizeExtension.swift */; };
+		74A0167E26B70BE6004DFEBE /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167D26B70BE6004DFEBE /* CGPointExtension.swift */; };
+		74A0168026B70D45004DFEBE /* MapGrideNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167F26B70D45004DFEBE /* MapGrideNode.swift */; };
+		74A0168226B71241004DFEBE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168126B71241004DFEBE /* ImagePicker.swift */; };
+		74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168326B71269004DFEBE /* SteppableSlider.swift */; };
+		74A0168626B712BE004DFEBE /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168526B712BE004DFEBE /* ImageNode.swift */; };
+		74A0168726B717A1004DFEBE /* SKImageGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167726B706FD004DFEBE /* SKImageGridViewModel.swift */; };
 		74A8966826B4563F00E828FF /* SKImageGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965A26B4563E00E828FF /* SKImageGridApp.swift */; };
 		74A8966926B4563F00E828FF /* SKImageGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965A26B4563E00E828FF /* SKImageGridApp.swift */; };
 		74A8966A26B4563F00E828FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965B26B4563E00E828FF /* ContentView.swift */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7442980826B7039E001C63BA /* SKImageGrid (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SKImageGrid (iOS).entitlements"; sourceTree = "<group>"; };
+		74A0167726B706FD004DFEBE /* SKImageGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKImageGridViewModel.swift; sourceTree = "<group>"; };
+		74A0167926B70B28004DFEBE /* MapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
+		74A0167B26B70B79004DFEBE /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		74A0167D26B70BE6004DFEBE /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		74A0167F26B70D45004DFEBE /* MapGrideNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGrideNode.swift; sourceTree = "<group>"; };
+		74A0168126B71241004DFEBE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		74A0168326B71269004DFEBE /* SteppableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppableSlider.swift; sourceTree = "<group>"; };
+		74A0168526B712BE004DFEBE /* ImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
 		74A8965A26B4563E00E828FF /* SKImageGridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKImageGridApp.swift; sourceTree = "<group>"; };
 		74A8965B26B4563E00E828FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74A8965C26B4563F00E828FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,9 +59,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7442980526B70311001C63BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74A0167626B706E1004DFEBE /* ViewModels */,
+				74A0167426B706C4004DFEBE /* Sprites */,
+				74A0168126B71241004DFEBE /* ImagePicker.swift */,
+				74A0168326B71269004DFEBE /* SteppableSlider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7442980626B70323001C63BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7442980726B70329001C63BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74A0167B26B70B79004DFEBE /* CGSizeExtension.swift */,
+				74A0167D26B70BE6004DFEBE /* CGPointExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74A0167426B706C4004DFEBE /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				74A0167926B70B28004DFEBE /* MapScene.swift */,
+				74A0167F26B70D45004DFEBE /* MapGrideNode.swift */,
+				74A0168526B712BE004DFEBE /* ImageNode.swift */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
+		74A0167626B706E1004DFEBE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				74A0167726B706FD004DFEBE /* SKImageGridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		74A8965426B4563D00E828FF = {
 			isa = PBXGroup;
 			children = (
+				7442980826B7039E001C63BA /* SKImageGrid (iOS).entitlements */,
 				74A8965926B4563E00E828FF /* Shared */,
 				74A8966226B4563F00E828FF /* Products */,
 			);
@@ -52,6 +116,9 @@
 		74A8965926B4563E00E828FF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7442980726B70329001C63BA /* Extensions */,
+				7442980526B70311001C63BA /* Views */,
+				7442980626B70323001C63BA /* Models */,
 				74A8965A26B4563E00E828FF /* SKImageGridApp.swift */,
 				74A8965B26B4563E00E828FF /* ContentView.swift */,
 				74A8965C26B4563F00E828FF /* Assets.xcassets */,
@@ -167,7 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A8966A26B4563F00E828FF /* ContentView.swift in Sources */,
+				74A0168626B712BE004DFEBE /* ImageNode.swift in Sources */,
+				74A0167A26B70B28004DFEBE /* MapScene.swift in Sources */,
+				74A0167E26B70BE6004DFEBE /* CGPointExtension.swift in Sources */,
+				74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */,
+				74A0167C26B70B79004DFEBE /* CGSizeExtension.swift in Sources */,
+				74A0168026B70D45004DFEBE /* MapGrideNode.swift in Sources */,
+				74A0168226B71241004DFEBE /* ImagePicker.swift in Sources */,
 				74A8966826B4563F00E828FF /* SKImageGridApp.swift in Sources */,
+				74A0167826B706FD004DFEBE /* SKImageGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +252,7 @@
 			files = (
 				74A8966B26B4563F00E828FF /* ContentView.swift in Sources */,
 				74A8966926B4563F00E828FF /* SKImageGridApp.swift in Sources */,
+				74A0168726B717A1004DFEBE /* SKImageGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SKImageGrid (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75B22CD4TC;
@@ -307,6 +384,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -318,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BRP.SKImageGrid;
 				PRODUCT_NAME = SKImageGrid;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SKImageGrid (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75B22CD4TC;
@@ -337,6 +417,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -348,6 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BRP.SKImageGrid;
 				PRODUCT_NAME = SKImageGrid;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
