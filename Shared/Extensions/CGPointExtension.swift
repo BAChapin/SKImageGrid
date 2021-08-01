@@ -15,4 +15,8 @@ extension CGPoint {
     func subtract(point: CGPoint) -> CGPoint {
         return CGPoint(x: x - point.x, y: y - point.y)
     }
+    
+    func scale(by value: CGFloat) -> CGPoint {
+        return CGPoint(x: x * value, y: y * value)
+    }
 }

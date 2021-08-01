@@ -11,6 +11,7 @@ import SpriteKit
 class MapScene: SKScene {
     var image: UIImage
     private var previousCameraScale = CGFloat()
+    private var startMovementPoint = CGPoint.zero
     
     private var centerPoint: CGPoint {
         return size.midPoint()
@@ -59,6 +60,9 @@ class MapScene: SKScene {
     override func didMove(to view: SKView) {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchAction(_:)))
         view.addGestureRecognizer(pinchGesture)
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panAction(_:)))
+        view.addGestureRecognizer(panGesture)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -95,7 +99,21 @@ class MapScene: SKScene {
                 sender.scale = 1.0
             }
         }
-        
-        
+    }
+    
+    @objc func panAction(_ sender: UIPanGestureRecognizer) {
+        if sender.numberOfTouches == 1 {
+            if sender.state == .began {
+                startMovementPoint = sender.location(in: view)
+            }
+            if sender.state == .changed {
+                let newLocation = sender.location(in: view)
+                let change = startMovementPoint.subtract(point: newLocation)
+                let scale = cameraNode.xScale / 0.5
+                let actualChange = CGPoint(x: change.x, y: change.y * -1.0).scale(by: scale)
+                cameraNode.position = cameraNode.position.add(point: actualChange)
+                startMovementPoint = newLocation
+            }
+        }
     }
 }
