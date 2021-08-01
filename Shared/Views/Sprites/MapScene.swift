@@ -57,7 +57,8 @@ class MapScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        return
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchAction(_:)))
+        view.addGestureRecognizer(pinchGesture)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -75,5 +76,26 @@ class MapScene: SKScene {
             mapGridNode.position = offset
             addChild(mapGridNode)
         }
+    }
+    
+    @objc func pinchAction(_ sender: UIPinchGestureRecognizer) {
+        if sender.numberOfTouches == 2 {
+            let locationInView = sender.location(in: view)
+            let location = self.convertPoint(fromView: locationInView)
+            if sender.state == .changed {
+                let deltaScale = (sender.scale - 1.0) * 2
+                let convertedScale = sender.scale - deltaScale
+                let newScale = cameraNode.xScale * convertedScale
+                cameraNode.setScale(newScale >= 1 ? 1.0 : newScale)
+                
+                let locationAfterScale = convertPoint(fromView: locationInView)
+                let locationDelta = location.subtract(point: locationAfterScale)
+                let newPoint = cameraNode.position.add(point: locationDelta)
+                cameraNode.position = (newScale >= 1 ? centerPoint : newPoint)
+                sender.scale = 1.0
+            }
+        }
+        
+        
     }
 }
