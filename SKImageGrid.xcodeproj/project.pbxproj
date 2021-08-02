@@ -16,6 +16,7 @@
 		74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168326B71269004DFEBE /* SteppableSlider.swift */; };
 		74A0168626B712BE004DFEBE /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168526B712BE004DFEBE /* ImageNode.swift */; };
 		74A0168726B717A1004DFEBE /* SKImageGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167726B706FD004DFEBE /* SKImageGridViewModel.swift */; };
+		74A0168A26B75DFA004DFEBE /* XTileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168926B75DFA004DFEBE /* XTileNode.swift */; };
 		74A8966826B4563F00E828FF /* SKImageGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965A26B4563E00E828FF /* SKImageGridApp.swift */; };
 		74A8966926B4563F00E828FF /* SKImageGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965A26B4563E00E828FF /* SKImageGridApp.swift */; };
 		74A8966A26B4563F00E828FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A8965B26B4563E00E828FF /* ContentView.swift */; };
@@ -34,6 +35,7 @@
 		74A0168126B71241004DFEBE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		74A0168326B71269004DFEBE /* SteppableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppableSlider.swift; sourceTree = "<group>"; };
 		74A0168526B712BE004DFEBE /* ImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
+		74A0168926B75DFA004DFEBE /* XTileNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTileNode.swift; sourceTree = "<group>"; };
 		74A8965A26B4563E00E828FF /* SKImageGridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKImageGridApp.swift; sourceTree = "<group>"; };
 		74A8965B26B4563E00E828FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74A8965C26B4563F00E828FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				74A0167926B70B28004DFEBE /* MapScene.swift */,
 				74A0167F26B70D45004DFEBE /* MapGrideNode.swift */,
 				74A0168526B712BE004DFEBE /* ImageNode.swift */,
+				74A0168926B75DFA004DFEBE /* XTileNode.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */,
 				74A0167C26B70B79004DFEBE /* CGSizeExtension.swift in Sources */,
 				74A0168026B70D45004DFEBE /* MapGrideNode.swift in Sources */,
+				74A0168A26B75DFA004DFEBE /* XTileNode.swift in Sources */,
 				74A0168226B71241004DFEBE /* ImagePicker.swift in Sources */,
 				74A8966826B4563F00E828FF /* SKImageGridApp.swift in Sources */,
 				74A0167826B706FD004DFEBE /* SKImageGridViewModel.swift in Sources */,

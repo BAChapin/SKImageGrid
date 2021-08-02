@@ -12,7 +12,6 @@ class MapGridNode: SKSpriteNode {
     var rows: Int!
     var columns: Int!
     var gridSize: CGFloat
-    var offset: CGPoint = .zero
     
     init?(gridSize: CGFloat, imageSize: CGSize) {
         let newSize = imageSize.add(width: 50.0, height: 50.0)
@@ -62,11 +61,9 @@ class MapGridNode: SKSpriteNode {
     }
     
     func gridPosition(row: Int, column: Int) -> CGPoint {
-        let offset = gridSize / 2.0 + 0.5
-        let xSize = CGFloat(column) * gridSize
-        let x = xSize - (gridSize * CGFloat(columns)) / 2.0 + CGFloat(offset)
-        let ySize = CGFloat(rows - row - 1) * gridSize
-        let y = ySize - (gridSize * CGFloat(rows)) / 2.0 + CGFloat(offset)
+        let gridOffset = gridSize / 2.0 + 0.5
+        let x = (CGFloat(row) * gridSize) + gridOffset
+        let y = (CGFloat(column) * gridSize) + gridOffset
         return CGPoint(x: x, y: y)
     }
     

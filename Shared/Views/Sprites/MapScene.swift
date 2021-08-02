@@ -14,10 +14,11 @@ class MapScene: SKScene {
     private var startMovementPoint = CGPoint.zero
     
     private var centerPoint: CGPoint {
-        return size.midPoint()
+        return size.point.center
     }
     
     private var backgroundNode: ImageNode!
+    private var tiles: [XTileNode] = []
     private var mapGridNode: MapGridNode!
     private var cameraNode: SKCameraNode = SKCameraNode()
     
@@ -66,7 +67,27 @@ class MapScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        return
+        if touches.count == 1 {
+            guard let touch = touches.first else { return }
+            if let mapGrid = self.childNode(withName: "MapGrid") as? MapGridNode {
+                let indexPath = mapGrid.indexPath(ofPoint: touch.location(in: self))
+                let point = mapGrid.gridPosition(row: indexPath.row, column: indexPath.section)
+                let removeNodes = nodes(at: point)
+                
+                if let node = removeNodes.first(where: { $0.name != "MapGrid" && $0.name != "Background" }) {
+                    node.removeFromParent()
+                    tiles.removeAll(where: { $0 == node })
+                } else {
+                    guard let xTile = XTileNode(gridSize: mapGridNode.gridSize) else { return }
+                    print(mapGrid.size, size)
+                    tiles.append(xTile)
+                    xTile.name = "\(tiles.count)"
+                    xTile.position = point
+                    xTile.zPosition = 3
+                    self.addChild(xTile)
+                }
+            }
+        }
     }
     
     func updateMapGrid(gridSize: CGFloat, offset: CGPoint) {
@@ -102,7 +123,7 @@ class MapScene: SKScene {
     }
     
     @objc func panAction(_ sender: UIPanGestureRecognizer) {
-        if sender.numberOfTouches == 1 {
+        if sender.numberOfTouches == 2 {
             if sender.state == .began {
                 startMovementPoint = sender.location(in: view)
             }
