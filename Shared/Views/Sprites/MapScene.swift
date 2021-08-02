@@ -16,6 +16,7 @@ class MapScene: SKScene {
     private var centerPoint: CGPoint {
         return size.point.center
     }
+    private var offset: CGPoint = .zero
     
     private var backgroundNode: ImageNode!
     private var tiles: [XTileNode] = []
@@ -25,6 +26,7 @@ class MapScene: SKScene {
     init(image: UIImage, gridSize: CGFloat, offset: CGPoint = .zero) {
         // Initial init
         self.image = image
+        self.offset = offset
         let size = image.size
         super.init(size: size)
         self.scaleMode = .aspectFit
@@ -41,7 +43,7 @@ class MapScene: SKScene {
             mapGridNode = gridNode
             mapGridNode.zPosition = 2
             mapGridNode.anchorPoint = .zero
-            mapGridNode.position = offset
+            mapGridNode.position = offset.add(point: CGPoint(x: 0, y: gridSize / 2))
             self.addChild(mapGridNode)
         }
         
@@ -82,7 +84,7 @@ class MapScene: SKScene {
                     print(mapGrid.size, size)
                     tiles.append(xTile)
                     xTile.name = "\(tiles.count)"
-                    xTile.position = point
+                    xTile.position = point.add(point: offset)
                     xTile.zPosition = 3
                     self.addChild(xTile)
                 }
@@ -92,13 +94,14 @@ class MapScene: SKScene {
     
     func updateMapGrid(gridSize: CGFloat, offset: CGPoint) {
         if let gridNode = MapGridNode(gridSize: gridSize, imageSize: size) {
+            self.offset = offset
             if let removeNode = childNode(withName: "MapGrid") {
                 removeNode.removeFromParent()
             }
             mapGridNode = gridNode
             mapGridNode.zPosition = 2
             mapGridNode.anchorPoint = .zero
-            mapGridNode.position = offset
+            mapGridNode.position = offset.add(point: CGPoint(x: 0, y: gridSize / 2))
             addChild(mapGridNode)
         }
     }
@@ -134,6 +137,22 @@ class MapScene: SKScene {
                 let actualChange = CGPoint(x: change.x, y: change.y * -1.0).scale(by: scale)
                 cameraNode.position = cameraNode.position.add(point: actualChange)
                 startMovementPoint = newLocation
+            }
+        } else if sender.numberOfTouches == 1 {
+            if sender.state == .changed {
+                if let mapGrid = self.childNode(withName: "MapGrid") as? MapGridNode {
+                    let location = convertPoint(fromView: sender.location(in: view))
+                    let indexPath = mapGrid.indexPath(ofPoint: location)
+                    let point = mapGrid.gridPosition(row: indexPath.row, column: indexPath.section)
+                    print("\(#function) 1 Touch, point: \(point)")
+                    
+                    if nodes(at: point).count < 3 {
+                        guard let pathTile = PathTile(gridSize: mapGrid.gridSize) else { return }
+                        pathTile.position = point.add(point: offset)
+                        pathTile.zPosition = 3
+                        self.addChild(pathTile)
+                    }
+                }
             }
         }
     }

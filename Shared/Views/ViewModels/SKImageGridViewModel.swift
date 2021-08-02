@@ -39,6 +39,6 @@ class SKImageGridViewModel: ObservableObject {
     }
     @Published var scene: MapScene!
     private var gridOffset: CGPoint {
-        return CGPoint(x: -xOffset, y: -yOffset - size / 2)
+        return CGPoint(x: -xOffset, y: -yOffset)
     }
 }
