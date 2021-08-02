@@ -66,14 +66,14 @@ class MapScene: SKScene {
         view.addGestureRecognizer(panGesture)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.count == 1 {
             guard let touch = touches.first else { return }
             if let mapGrid = self.childNode(withName: "MapGrid") as? MapGridNode {
                 let indexPath = mapGrid.indexPath(ofPoint: touch.location(in: self))
                 let point = mapGrid.gridPosition(row: indexPath.row, column: indexPath.section)
                 let removeNodes = nodes(at: point)
-                
+
                 if let node = removeNodes.first(where: { $0.name != "MapGrid" && $0.name != "Background" }) {
                     node.removeFromParent()
                     tiles.removeAll(where: { $0 == node })
