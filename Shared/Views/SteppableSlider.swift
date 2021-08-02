@@ -28,6 +28,7 @@ struct SteppableSlider: View {
             }
 
         }
+        .padding(.horizontal)
     }
     
 }

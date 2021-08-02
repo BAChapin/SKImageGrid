@@ -12,17 +12,23 @@ class SKImageGridViewModel: ObservableObject {
     
     @Published var size: CGFloat = 10.0 {
         didSet {
-            scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            if image != nil {
+                scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            }
         }
     }
     @Published var xOffset: CGFloat = 0.0 {
         didSet {
-            scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            if image != nil {
+                scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            }
         }
     }
     @Published var yOffset: CGFloat = 0.0 {
         didSet {
-            scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            if image != nil {
+                scene.updateMapGrid(gridSize: size, offset: gridOffset)
+            }
         }
     }
     @Published var presentPicker: Bool = false
@@ -33,6 +39,6 @@ class SKImageGridViewModel: ObservableObject {
     }
     @Published var scene: MapScene!
     private var gridOffset: CGPoint {
-        return CGPoint(x: -xOffset, y: -yOffset)
+        return CGPoint(x: -xOffset, y: -yOffset - size / 2)
     }
 }
