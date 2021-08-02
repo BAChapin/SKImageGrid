@@ -11,7 +11,7 @@
 		74A0167A26B70B28004DFEBE /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167926B70B28004DFEBE /* MapScene.swift */; };
 		74A0167C26B70B79004DFEBE /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167B26B70B79004DFEBE /* CGSizeExtension.swift */; };
 		74A0167E26B70BE6004DFEBE /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167D26B70BE6004DFEBE /* CGPointExtension.swift */; };
-		74A0168026B70D45004DFEBE /* MapGrideNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167F26B70D45004DFEBE /* MapGrideNode.swift */; };
+		74A0168026B70D45004DFEBE /* MapGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0167F26B70D45004DFEBE /* MapGridNode.swift */; };
 		74A0168226B71241004DFEBE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168126B71241004DFEBE /* ImagePicker.swift */; };
 		74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168326B71269004DFEBE /* SteppableSlider.swift */; };
 		74A0168626B712BE004DFEBE /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0168526B712BE004DFEBE /* ImageNode.swift */; };
@@ -31,7 +31,7 @@
 		74A0167926B70B28004DFEBE /* MapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 		74A0167B26B70B79004DFEBE /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		74A0167D26B70BE6004DFEBE /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
-		74A0167F26B70D45004DFEBE /* MapGrideNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGrideNode.swift; sourceTree = "<group>"; };
+		74A0167F26B70D45004DFEBE /* MapGridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGridNode.swift; sourceTree = "<group>"; };
 		74A0168126B71241004DFEBE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		74A0168326B71269004DFEBE /* SteppableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppableSlider.swift; sourceTree = "<group>"; };
 		74A0168526B712BE004DFEBE /* ImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				74A0167926B70B28004DFEBE /* MapScene.swift */,
-				74A0167F26B70D45004DFEBE /* MapGrideNode.swift */,
+				74A0167F26B70D45004DFEBE /* MapGridNode.swift */,
 				74A0168526B712BE004DFEBE /* ImageNode.swift */,
 				74A0168926B75DFA004DFEBE /* XTileNode.swift */,
 			);
@@ -242,7 +242,7 @@
 				74A0167E26B70BE6004DFEBE /* CGPointExtension.swift in Sources */,
 				74A0168426B71269004DFEBE /* SteppableSlider.swift in Sources */,
 				74A0167C26B70B79004DFEBE /* CGSizeExtension.swift in Sources */,
-				74A0168026B70D45004DFEBE /* MapGrideNode.swift in Sources */,
+				74A0168026B70D45004DFEBE /* MapGridNode.swift in Sources */,
 				74A0168A26B75DFA004DFEBE /* XTileNode.swift in Sources */,
 				74A0168226B71241004DFEBE /* ImagePicker.swift in Sources */,
 				74A8966826B4563F00E828FF /* SKImageGridApp.swift in Sources */,
